@@ -1,14 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:manager_house_fontend/core/config/theme/app_theme.dart';
+import 'package:manager_house_fontend/presentation/splash/pages/splash.dart';
+
 
 void main(){
-
+runApp(const HouseApp());
 }
-
-class HouserApp extends StatelessWidget {
-  const MyWidget({super.key});
+class HouseApp extends StatelessWidget {
+  const HouseApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return  MaterialApp(
+      theme: AppTheme.lightTheme,
+      debugShowCheckedModeBanner: false,
+      home:  SplashPage(),
+    );
+   }
   }
-}
